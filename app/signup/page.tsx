@@ -190,7 +190,7 @@ export default function SignupPage() {
                 {/* Phone Field */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
+                    Phone Number (Optional)
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -200,7 +200,6 @@ export default function SignupPage() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      required
                       value={formData.phone}
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d364a4] focus:border-transparent"
@@ -225,26 +224,56 @@ export default function SignupPage() {
                   />
                 </div>
 
-                {/* SMS Consent Checkbox */}
-                <div className="bg-[#3b3a41] text-white rounded-lg p-6">
-                  <div className="flex items-start">
-                    <input
-                      type="checkbox"
-                      id="sms-consent"
-                      required
-                      className="mt-1 h-4 w-4 text-[#d364a4] focus:ring-[#d364a4] border-gray-300 rounded flex-shrink-0"
-                    />
-                    <label htmlFor="sms-consent" className="ml-3 text-sm leading-relaxed">
-                      By checking this box and clicking submit, you provide consent to the SMS terms to receive automated customer care calls or texts from BWO Verify. Message frequency varies and message and data rates may apply. I understand I may opt-out of SMS communications by replying 'STOP'. I may email support@bwoverify.com or reply 'HELP' for help for more information. Consent to receive texts or calls is not required as a condition of purchasing any products or services. Your number will not be used by 3rd parties or affiliates for customer care purposes. I agree with the{' '}
-                      <Link href="/terms" className="text-pink-400 hover:text-pink-300 font-medium underline">
-                        Terms & Conditions
-                      </Link>{' '}
-                      and{' '}
-                      <Link href="/privacy" className="text-pink-400 hover:text-pink-300 font-medium underline">
-                        Privacy Policy
-                      </Link>
-                      .
-                    </label>
+                {/* Consent Checkboxes */}
+                <div className="space-y-4">
+                  {/* SMS Consent Checkbox */}
+                  <div className="bg-[#3b3a41] text-white rounded-lg p-6">
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="sms-consent"
+                        className="mt-1 h-4 w-4 text-[#d364a4] focus:ring-[#d364a4] border-gray-300 rounded flex-shrink-0"
+                      />
+                      <label htmlFor="sms-consent" className="ml-3 text-sm leading-relaxed">
+                        By checking this box, you provide consent to receive automated SMS messages from BWO Verify. Message frequency varies and message and data rates may apply. You may opt-out by replying 'STOP'. Reply 'HELP' for help or email support@bwoverify.com. Consent is not required as a condition of purchasing any products or services.
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Call Consent Checkbox */}
+                  <div className="bg-[#3b3a41] text-white rounded-lg p-6">
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="call-consent"
+                        className="mt-1 h-4 w-4 text-[#d364a4] focus:ring-[#d364a4] border-gray-300 rounded flex-shrink-0"
+                      />
+                      <label htmlFor="call-consent" className="ml-3 text-sm leading-relaxed">
+                        By checking this box, you provide consent to receive automated customer care calls from BWO Verify. Call frequency varies and standard phone rates may apply. You may opt-out at any time by contacting support@bwoverify.com. Consent is not required as a condition of purchasing any products or services.
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Terms & Privacy Policy Checkbox */}
+                  <div className="bg-gray-50 border border-gray-300 rounded-lg p-6">
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="terms-consent"
+                        className="mt-1 h-4 w-4 text-[#d364a4] focus:ring-[#d364a4] border-gray-300 rounded flex-shrink-0"
+                      />
+                      <label htmlFor="terms-consent" className="ml-3 text-sm leading-relaxed text-gray-700">
+                        I agree with the{' '}
+                        <Link href="/terms" className="text-[#d364a4] hover:text-[#c24d93] font-medium underline">
+                          Terms & Conditions
+                        </Link>{' '}
+                        and{' '}
+                        <Link href="/privacy" className="text-[#d364a4] hover:text-[#c24d93] font-medium underline">
+                          Privacy Policy
+                        </Link>
+                        .
+                      </label>
+                    </div>
                   </div>
                 </div>
 

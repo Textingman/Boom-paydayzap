@@ -86,6 +86,11 @@ export default function PrivacyPage() {
             <strong>Important:</strong> We do NOT store phone numbers used in the verification process. Phone numbers are only displayed (masked) during the verification flow and are not logged or retained in our systems. All tracking parameters are passed through without storing personal identifiable information.
           </p>
 
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.4 Mobile Information Sharing</h3>
+          <p className="text-gray-600 mb-6">
+            <strong>No mobile information will be shared or sold to third parties for marketing purposes.</strong> We are committed to protecting your mobile information and will only use it for the purposes outlined in this Privacy Policy, such as providing our verification service and communicating with you about your account.
+          </p>
+
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. How We Use Your Information</h2>
           <p className="text-gray-600 mb-4">We use the information we collect to:</p>
           <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
